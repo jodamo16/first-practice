@@ -5,6 +5,13 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 /*typography and main structure*/
@@ -94,12 +101,12 @@ a {
 
 .badge--primary {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-white);
 }
 
 .badge--secondary {
   background: var(--color-secondary);
-  color: white;
+  color: var(--color-white);
 }
 
 .badge--small {
@@ -162,4 +169,67 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+}
+
+/*button*/
+.btn {
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: #3a8ffd;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn--secondary:hover {
+  background: #00c8eb;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn--accent:hover {
+  background: #fd4516;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn--outline {
+  background: var(--color-white);
+  border: 2px solid var(--color-headings);
+  color: var(--color-headings);
+}
+
+.btn--outline:hover {
+  background: var(--color-headings);
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
